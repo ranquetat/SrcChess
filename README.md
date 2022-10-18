@@ -21,4 +21,4 @@ Creating your own chess board (manually or from PGN)
 Hints for the player
 Etc.
 
-Autor: Jacques Fournier
+Autor: Jacques Fournier (https://www.codeproject.com/script/Membership/View.aspx?mid=399077)
