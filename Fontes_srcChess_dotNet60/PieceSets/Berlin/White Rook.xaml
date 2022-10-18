@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Viewbox Stretch="Uniform">
+    <Grid Width="11.6406303048134" Height="13.6914100646973">
+      <Path Data="M1.2679213,11.226956 L2.5000695,3.3881703 8.9359551,3.4220244 10.442767,11.123812 z" Fill="White" Margin="1.268,3.389,1.2,2.464" Stretch="Fill" />
+      <Path Fill="Black" Stretch="Fill" Data="M8.8817842E-16,0 L8.8817842E-16,3.85743 10.05859,3.85743 10.05859,0 7.33398,0 7.33398,1.01563 6.36719,1.01563 6.36719,0.00977 3.70117,0.00977 3.70117,1.01563 2.65625,1.01563 2.65625,0 z" Height="3.857" Margin="0.791,0" VerticalAlignment="Top" />
+      <Path Fill="White" Stretch="Fill" Data="M1.5543122E-15,2.7256014E-08 L1.34765,2.7256014E-08 1.34765,1.02539 3.7207,1.02539 3.7207,2.7256014E-08 5,2.7256014E-08 5,1.02539 7.39258,1.02539 7.39258,2.7256014E-08 8.70117,2.7256014E-08 8.70117,2.5 3.330669E-15,2.5 z" Height="2.5" Margin="1.416,0.674,1.524,0" VerticalAlignment="Top" />
+      <Path Fill="Black" Stretch="Fill" Data="M1.12305,1.876832E-08 L1.80664,1.876832E-08 0.6836,7.11914 -4.4408924E-16,7.11914 z" HorizontalAlignment="Left" Margin="0.957,3.857,0,2.714" Width="1.807" />
+      <Path Fill="Black" Stretch="Fill" Data="M2.3161057E-23,1.876832E-08 L0.6836,1.876832E-08 1.9336,7.11914 1.25,7.11914 z" HorizontalAlignment="Right" Margin="0,3.857,0.957,2.714" Width="1.934" />
+      <Path Fill="Black" Stretch="Fill" Data="M0,3.5527135E-15 L0,2.71484 11.64063,2.71484 11.64063,3.5527135E-15 z" Height="2.715" Margin="0,0,0,-0.001" VerticalAlignment="Bottom" />
+      <Path Fill="White" Stretch="Fill" Data="M6.6613386E-16,7.1054268E-15 L10.33203,7.1054268E-15 10.33203,1.28906 6.6613386E-16,1.28906 z" Height="1.289" Margin="0.625,0,0.684,0.732" VerticalAlignment="Bottom" />
+      <Path Data="M-1.5730463,8.2833031" Fill="White" HorizontalAlignment="Left" Height="0" Margin="-1.573,0,0,5.408" Stretch="Fill" VerticalAlignment="Bottom" Width="0" />
+    </Grid>
+  </Viewbox>
+</UserControl>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="SrcChess2.FrmPgnFilter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select Filter Criterias" Height="615" Width="954" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" Margin="0" Name="dockPanel1" VerticalAlignment="Stretch">
+            <Label Content="Description" Height="28" Name="labelDesc" VerticalAlignment="Top" DockPanel.Dock="Top" HorizontalContentAlignment="Center" />
+            <StackPanel Name="stackPanel1" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Create..." Height="23" Name="butOk" Width="75" Margin="10" IsDefault="True" Click="ButOk_Click" />
+                <Button Content="Test" Height="23" Name="butTest" Width="75" Margin="10" Click="ButTest_Click" />
+                <Button Content="Close" Height="23" Name="butCancel" Width="75" Margin="10" IsCancel="True" />
+            </StackPanel>
+            <UniformGrid Rows="1" Columns="3">
+                <GroupBox Header="ELO Ranges" Name="groupBox1">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                            <CheckBox Content="All Ranges" Height="16" Name="checkBoxAllRanges" Margin="10" Checked="CheckBoxAllRanges_Checked" Unchecked="CheckBoxAllRanges_Unchecked" />
+                            <CheckBox Content="Includes Unrated" Height="16" Name="checkBoxIncludeUnrated" Margin="10" />
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Bottom">
+                            <Button Content="Select All" Height="23" Name="butSelectAllRange" Margin="10,5" Click="ButSelectAllRange_Click" />
+                            <Button Content="Clear All" Height="23" Name="butClearAllRange" Margin="10,5" Click="ButClearAllRange_Click" />
+                        </StackPanel>
+                        <ListBox Name="listBoxRange" />
+                    </DockPanel>
+                </GroupBox>
+                <GroupBox Header="Players" Name="groupBox2">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                            <CheckBox Content="All Players" Height="16" Name="checkBoxAllPlayer" Margin="10" Checked="CheckBoxAllPlayer_Checked" Unchecked="CheckBoxAllPlayer_Unchecked" />
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Bottom">
+                            <Button Content="Select All" Height="23" Name="butSelectAllPlayers" Margin="10,5" Click="ButSelectAllPlayers_Click" />
+                            <Button Content="Clear All" Height="23" Name="butClearAllPlayers" Margin="10,5" Click="ButClearAllPlayers_Click" />
+                        </StackPanel>
+                        <ListBox Name="listBoxPlayer" />
+                    </DockPanel>
+                </GroupBox>
+                <GroupBox Header="Ending" Name="groupBox3">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                            <CheckBox Content="All End Games" Height="16" Name="checkBoxAllEndGame" Margin="10" Checked="CheckBoxAllEndGame_Checked" Unchecked="CheckBoxAllEndGame_Unchecked" />
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Bottom">
+                            <Button Content="Select All" Height="23" Name="butSelectAllEndGame" Margin="10,5" Click="ButSelectAllEndGame_Click" />
+                            <Button Content="Clear All" Height="23" Name="butClearAllEndGame" Margin="10,5" Click="ButClearAllEndGame_Click" />
+                        </StackPanel>
+                        <ListBox Name="listBoxEnding" />
+                    </DockPanel>
+                </GroupBox>
+            </UniformGrid>
+        </DockPanel>
+    </Grid>
+</Window>

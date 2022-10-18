@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <nullable>enable</nullable>
+    <Authors>Jacques Fournier</Authors>
+    <Company>Jacques Fournier</Company>
+    <Product>SrcChess2 (Core)</Product>
+    <AssemblyVersion>3.20.0.0</AssemblyVersion>
+    <FileVersion>3.20.0.0</FileVersion>
+    <Copyright>Copyright © Jacques Fournier 2007-2022</Copyright>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+	<DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="111probs.pgn" />
+    <None Remove="Book2500.bin" />
+    <None Remove="BookUnrated.bin" />
+	<None Remove="mssccprj.scc" />
+	<None Remove="Properties\vssver.scc" />
+	<None Remove="Resources\vssver.scc" />
+	<None Remove="vssver.scc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="111probs.pgn" />
+    <EmbeddedResource Include="Book2500.bin" />
+    <EmbeddedResource Include="BookUnrated.bin" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

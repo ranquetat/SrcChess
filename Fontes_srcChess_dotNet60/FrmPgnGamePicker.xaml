@@ -1,0 +1,18 @@
+﻿<Window x:Class="SrcChess2.FrmPgnGamePicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select the Game from the PGN File" Height="530" Width="810" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" Name="dockPanel1" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
+                <Button IsDefault="True" Content="Ok (No Move)" Width="100" VerticalAlignment="Bottom" Margin="10" Click="Button_Click_1" />
+                <Button Content="Ok" Width="100" VerticalAlignment="Bottom" Margin="10" Click="Button_Click" />
+                <Button Content="Cancel" HorizontalAlignment="Center" Width="100" IsCancel="True" VerticalAlignment="Bottom" Padding="1" Margin="10" />
+            </StackPanel>
+            <UniformGrid Rows="2" Columns="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <ListBox Name="listBoxGames" Margin="5" SelectionChanged="ListBoxGames_SelectionChanged" />
+                <TextBox Name="textBoxGame" Margin="5" />
+            </UniformGrid>
+        </DockPanel>
+    </Grid>
+</Window>

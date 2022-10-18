@@ -1,0 +1,13 @@
+﻿<Window x:Class="SrcChess2.FrmCreatePgnGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Creates a Game from PGN" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="531" d:DesignWidth="784" WindowStartupLocation="CenterOwner" Width="768" Height="581" ShowInTaskbar="False">
+    <DockPanel HorizontalAlignment="Stretch" Margin="0" Name="dockPanel1" VerticalAlignment="Stretch">
+        <Label Content="Paste the PGN/FEN Game" Height="28" Name="label1" VerticalAlignment="Top" DockPanel.Dock="Top" HorizontalContentAlignment="Center" />
+        <StackPanel Name="stackPanel1" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Ok" Height="23" Name="butOk" Width="75" Margin="30" IsDefault="True" Click="ButOk_Click" />
+            <Button Content="Cancel" Height="23" Name="butCancel" Width="75" Margin="30" IsCancel="True" />
+        </StackPanel>
+        <TextBox Name="textBox1" AcceptsReturn="True" AcceptsTab="True" BorderBrush="Black" FontFamily="Courier New" Margin="5" />
+    </DockPanel>
+</Window>

@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="SrcChess2.ChessBoardControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <UniformGrid Rows="1" Columns="8">
+            <Label Content="a" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="b" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="c" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="d" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="e" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="f" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="g" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="h" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+        </UniformGrid>
+        <StackPanel Orientation="Horizontal">
+            <UniformGrid Rows="8" Columns="1">
+                <Label Content="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            </UniformGrid>
+            <Viewbox>
+                <Grid IsSharedSizeScope="True"  Name="CellContainer" MinWidth="100" MinHeight="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                        <RowDefinition Height="*" SharedSizeGroup="A" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                        <ColumnDefinition Width="*" SharedSizeGroup="A" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Viewbox>
+            <UniformGrid Rows="8" Columns="1">
+                <Label Content="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+                <Label Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            </UniformGrid>
+        </StackPanel>
+        <UniformGrid Rows="1" Columns="8">
+            <Label Content="a" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="b" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="c" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="d" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="e" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="f" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="g" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+            <Label Content="h" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" />
+        </UniformGrid>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Viewbox Stretch="Uniform">
+    <Grid Width="14.1503901481628" Height="16.1230499744415">
+      <Path Fill="Black" Stretch="Fill" Data="M-4.4176211E-29,-4.4176211E-29 L-4.4176211E-29,2.60742 4.08204,2.60742 6.54297,3.52539 6.54297,0.92773 4.08204,-4.4176211E-29 z" HorizontalAlignment="Right" Height="3.525" VerticalAlignment="Bottom" Width="6.543" />
+      <Path Fill="Black" Stretch="Fill" Data="M5.9375,3.9443045E-31 L3.7793,2.16797 4.89258,3.29102 4.89258,3.61329 4.13086,3.65239 C3.62304,3.67839 3.06477,3.78912 2.45606,3.98442 1.84733,4.17975 1.28743,4.49387 0.77637,4.9268 0.2653,5.35976 0.00651,5.98638 1.2407709E-24,6.80668 L1.2407709E-24,8.62309 0.19531,9.37504 C0.32552,9.87635 0.65104,10.43625 1.17188,11.05473 L1.17188,11.53325 10.69336,11.53325 10.69336,11.14262 11.20117,10.41508 C11.5397,9.93006 11.76756,9.32622 11.88477,8.60356 L11.88477,6.78715 11.75293,6.10356 C11.66503,5.64784 11.39322,5.2442 10.9375,4.89262 L8.62305,7.20708 7.8125,6.39653 9.96094,4.24809 9.04297,3.92094 C8.43098,3.70286 7.73436,3.60032 6.95313,3.61333 L6.95313,3.28129 8.08594,2.14848 z" Margin="1.162,0,1.103,4.59" />
+      <Path Fill="Black" Stretch="Fill" Data="M6.54297,-4.4176211E-29 L2.45117,-4.4176211E-29 3.9443045E-31,0.92773 3.9443045E-31,3.52539 2.45117,2.60742 6.54297,2.60742 z" HorizontalAlignment="Left" Height="3.525" VerticalAlignment="Bottom" Width="6.543" />
+      <Path Fill="White" Stretch="Fill" Data="M-5.3290706E-15,1.13282 L1.12305,3.574371E-08 2.25586,1.13282 1.12305,2.26563 z" Height="2.266" Margin="5.977,1.025,5.917,0" VerticalAlignment="Top" />
+    </Grid>
+  </Viewbox>
+</UserControl>

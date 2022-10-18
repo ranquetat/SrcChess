@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Viewbox Stretch="Uniform">
+    <Grid Width="12.5402897298336" Height="14.5800800323486">
+      <Path Fill="Black" Stretch="Fill" Data="M0.47974,14.58008 L5.5511151E-17,14.09973 5.5511151E-17,12.34009 2.54029,9.84009 2.54029,4.86023 0.57984,2.94006 0.57984,0.70007 1.27991,0 3.0597,0 3.49976,0.44006 3.49976,1.06018 4.45984,1.06018 4.45984,0.44006 4.87976,0 7.65992,0 8.07984,0.44006 8.07984,1.06018 9.03992,1.06018 9.03992,0.44006 9.45984,0 11.25977,0 11.95984,0.70007 11.95984,2.94006 10,4.86023&#xD;&#xA;10,9.84009 12.54029,12.34009 12.54029,14.09973 12.0398,14.58008 z" />
+      <Path Fill="White" Stretch="Fill" Data="M4.4918052E-09,-6.6174449E-24 L4.4918052E-09,0.83984 5.65979,0.83984 5.65979,-6.6174449E-24 z" Height="0.84" Margin="3.44,0,3.44,4.48" VerticalAlignment="Bottom" />
+      <Path Fill="White" Stretch="Fill" Data="M4.4918052E-09,1.0375976E-07 L4.4918052E-09,0.8398401 5.65979,0.8398401 5.65979,1.0375976E-07 z" Height="0.84" Margin="3.44,4.76,3.44,0" VerticalAlignment="Top" />
+    </Grid>
+  </Viewbox>
+</UserControl>

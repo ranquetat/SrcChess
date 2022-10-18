@@ -1,0 +1,45 @@
+﻿<Window x:Class="SrcChess2.FrmBoardSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Board Setting" Height="576" Width="833" WindowStartupLocation="CenterOwner" xmlns:my="clr-namespace:SrcChess2">
+    <DockPanel HorizontalAlignment="Stretch" Margin="0" Name="dockPanel1"  VerticalAlignment="Stretch">
+        <StackPanel Name="stackPanel1" Orientation="Horizontal" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
+            <Button Content="Ok" Height="23" Name="butOk" Width="75" Margin="20" IsDefault="True" Click="ButOk_Click" />
+            <Button Content="Cancel" Height="23" Name="butCancel" Width="75" Margin="20" IsCancel="True" />
+        </StackPanel>
+        <DockPanel Name="dockPanel2">
+            <StackPanel Name="stackPanel2" HorizontalAlignment="Left" Width="302">
+                <GroupBox Header="Setting" Name="groupBox1" Margin="10">
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Stretch" Margin="0" Name="stackPanel3" VerticalAlignment="Stretch">
+                            <Grid Height="100" Name="grid1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="3*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Lite Square Color" Grid.RowSpan="1" Height="28" HorizontalAlignment="Right" Margin="0" Name="label1" VerticalAlignment="Top" />
+                                <Label Content="Dark Square Color" Grid.RowSpan="1" Height="28" HorizontalAlignment="Right" Margin="0" Name="label2" VerticalAlignment="Top" Grid.Row="1" />
+                                <Label Content="Background Color" Grid.RowSpan="1" Height="28" HorizontalAlignment="Right" Margin="0" Name="label3" VerticalAlignment="Top" Grid.Row="2" />
+                                <Label Content="Piece Set" Grid.RowSpan="1" Height="28" HorizontalAlignment="Right" Margin="0" Name="label4" VerticalAlignment="Top" Grid.Row="3" />
+                                <my:CustomColorPicker Grid.Column="1" Grid.RowSpan="1" HorizontalAlignment="Stretch" Margin="10,0" x:Name="customColorPickerLite" VerticalAlignment="Center" />
+                                <my:CustomColorPicker HorizontalAlignment="Stretch" Margin="10,0" x:Name="customColorPickerDark" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" />
+                                <my:CustomColorPicker HorizontalAlignment="Stretch" Margin="10,0" x:Name="customColorBackground" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" />
+                                <ComboBox Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Stretch" Margin="10,0" Name="comboBoxPieceSet" VerticalAlignment="Center" Padding="4,3" SelectionChanged="ComboBoxPieceSet_SelectionChanged" />
+                            </Grid>
+                            <Button Content="Reset to Default" Height="23" Name="button1" Width="127" Margin="10" Click="ButResetToDefault_Click" />
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+            </StackPanel>
+            <Viewbox Stretch="Uniform">
+                <my:ChessBoardControl x:Name="m_chessCtl" />
+            </Viewbox>
+        </DockPanel>
+    </DockPanel>
+</Window>

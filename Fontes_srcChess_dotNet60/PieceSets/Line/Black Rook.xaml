@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Viewbox Stretch="Uniform">
+    <Grid Width="16.0009694099426" Height="13.7011699676514">
+      <Path Fill="Black" Stretch="Fill" Data="M0,2.2206454E-16 L0,7.3541701 16.000969,7.3541701 16.000969,0 z M3.677,8.68217 L3.677,13.70217 12.35397,13.70217 12.35397,8.68217 z" Margin="0,0,0,-0.001" />
+      <Path Fill="White" Stretch="Fill" Data="M8.6619694,0 L10.346969,0 10.346969,3.311 8.6619694,3.311 z M4.341,0 L6.0059694,0 6.0059694,3.311 4.341,3.311 z M1.7763566E-15,0 L1.685,0 1.685,3.311 1.7763566E-15,3.311 z" Height="3.311" Margin="2.842,1.357,2.812,0" VerticalAlignment="Top" />
+    </Grid>
+  </Viewbox>
+</UserControl>

@@ -1,0 +1,97 @@
+﻿<Window x:Class="SrcChess2.FrmSearchMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manual Search Mode" Height="478.658" Width="799.142" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center">
+            <Button Content="Ok" Height="23" HorizontalAlignment="Left" Margin="10" Name="butOk" VerticalAlignment="Top" Width="75" IsDefault="True" Click="ButOk_Click" />
+            <Button Content="Cancel" Height="23" HorizontalAlignment="Center" Margin="10" Name="butCancel" VerticalAlignment="Center" Width="75" IsDefault="False" IsCancel="True" />
+        </StackPanel>
+        <Grid Name="gridManualSetting">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="15*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <GroupBox Header="Search Method" HorizontalAlignment="Stretch" Margin="10" Name="groupBox1" VerticalAlignment="Stretch">
+                <UniformGrid Rows="1" Columns="2">
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0">
+                        <RadioButton Content="Alpha-Beta" Height="16" Name="radioButtonAlphaBeta" Margin="5" ToolTip="Alpha-Beta Pruning: Faster version of minimax" />
+                        <RadioButton Content="MinMax" Height="16" Name="radioButtonMinMax" Margin="5" ToolTip="Slower than Alpha-Beta. Used mainly for diagnostics." />
+                    </StackPanel>
+                    <GroupBox Header="Book Opening">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0">
+                            <RadioButton Content="None" Height="16" Name="radioButtonNoBook" Margin="5" ToolTip="The computer doesn't use any opening book." />
+                            <RadioButton Content="Unrated Player" Height="16" Name="radioButtonUnrated" Margin="5" ToolTip="Use an opening book created from unrated games." />
+                            <RadioButton Content="Senior Master Player" Height="16" Name="radioButtonELO2500" Margin="5" ToolTip="Use an opening book created from senior master games." />
+                        </StackPanel>
+                    </GroupBox>
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Header="Search Type" HorizontalAlignment="Stretch" Margin="10" Name="groupBox2" VerticalAlignment="Stretch" Grid.Column="1">
+                <UniformGrid Rows="1" Columns="2">
+                    <StackPanel Name="stackPanel1" Margin="0,10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <RadioButton Content="Fixed-Depth" Height="16" Name="radioButtonFixDepth" Margin="5" Checked="RadioButtonSearchType_CheckedChanged" Unchecked="RadioButtonSearchType_CheckedChanged" ToolTip="Limit the search to the specified number of plies." />
+                        <RadioButton Content="Iterative Deepening" Height="16" Name="radioButtonFixDepthIterative" Margin="5" Unchecked="RadioButtonSearchType_CheckedChanged" IsEnabled="False" Checked="RadioButtonSearchType_CheckedChanged" ToolTip="Use iterative deepening. It usually gives better results than simple fixed-depth." />
+                        <RadioButton Content="Average Time" Height="16" Name="radioButtonAvgTime" Margin="5" Checked="RadioButtonSearchType_CheckedChanged" Unchecked="RadioButtonSearchType_CheckedChanged" IsEnabled="False" ToolTip="Use iterative deepening with a limited time instead of a limited ply count." />
+                    </StackPanel>
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Ply Count:" Grid.RowSpan="1" Height="28" HorizontalAlignment="Right" Margin="5" Name="labelNumberOfPly" VerticalAlignment="Center" />
+                            <Label Name="plyCount2" VerticalAlignment="Center">XX</Label>
+                        </StackPanel>
+                        <Label Content="Average Time (sec):" Height="28" HorizontalAlignment="Right" Margin="0" Name="labelAvgTime" VerticalAlignment="Center" Grid.Row="1" />
+                        <TextBox Height="23" HorizontalAlignment="Center" Margin="0" Name="textBoxTimeInSec" VerticalAlignment="Center" Width="46" Grid.Column="1" Grid.Row="1" TextChanged="TextBoxTimeInSec_TextChanged" />
+                        <Slider Grid.Column="1" Height="23" HorizontalAlignment="Center" Margin="0" Name="plyCount" VerticalAlignment="Center" Width="62" SelectionEnd="12" SelectionStart="1" IsSnapToTickEnabled="True" Minimum="1" Maximum="12" SmallChange="1" />
+                    </Grid>
+
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Header="Multi-Threading" HorizontalAlignment="Stretch" Margin="10" Name="groupBox3" VerticalAlignment="Stretch" Grid.Row="1">
+                <UniformGrid Rows="1" Columns="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                    <RadioButton Content="One / Processor" Height="16" Name="radioButtonOnePerProc" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Use all available processors to find the best move." />
+                    <RadioButton Content="One for Search" Height="16" Name="radioButtonOneForUI" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Use a different processor to find the best move." />
+                    <RadioButton Content="Debug" Height="16" Name="radioButtonNoThread" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTip="Use the same processor for the UI and to find the best move. Makes debugging easier." />
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Header="Board Evaluation" HorizontalAlignment="Stretch" Margin="10" Name="groupBox4" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1">
+                <StackPanel Name="stackPanel2">
+                    <UniformGrid Rows="1" Columns="2">
+                        <Label Content="White:" Height="28" HorizontalAlignment="Left" Margin="5" Name="label3" VerticalAlignment="Center" />
+                        <Label Content="Black:" Height="28" HorizontalAlignment="Left" Margin="5" Name="label4" VerticalAlignment="Center" />
+                    </UniformGrid>
+                    <UniformGrid Rows="1" Columns="2">
+                        <ComboBox Name="comboBoxWhiteBEval" Padding="4,3" Height="23" Margin="5" ToolTip="Choose the board evaluation algorithm for the white player. Beginner: All pieces have the same value. Basic: Basic algorithm. Test: In development." />
+                        <ComboBox Name="comboBoxBlackBEval" Height="23" ToolTip="Choose the board evaluation algorithm for the black player. Beginner: All pieces have the same value. Basic: Basic algorithm. Test: In development." />
+                    </UniformGrid>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Random Move" HorizontalAlignment="Stretch" Margin="10" Name="groupBox5" VerticalAlignment="Stretch" Grid.Row="2">
+                <UniformGrid Rows="1" Columns="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                    <RadioButton Content="Off" Height="16" Name="radioButtonRndOff" Margin="5" HorizontalAlignment="Center" ToolTip="Use the first move when choosing between moves of equal value." />
+                    <RadioButton Content="On (Repetitive)" Height="16" Name="radioButtonRndOnRep" Margin="5" HorizontalAlignment="Center"  ToolTip="Use a random move when choosing between moves of equal value. The random sequence is repetitive: two identical games will give identical results." />
+                    <RadioButton Content="On" Height="16" Name="radioButtonRndOn" Margin="5" HorizontalAlignment="Center"  ToolTip="Use a non repetitive random move when choosing between moves of equal value."/>
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Header="Transposition Table" HorizontalAlignment="Stretch" Margin="10" Name="groupBox6" VerticalAlignment="Stretch" Grid.Column="1" Grid.RowSpan="1" Grid.Row="2">
+                <StackPanel Name="stackPanel3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <CheckBox Content="Activate" Height="16" Name="checkBoxTransTable" Margin="10,5,5,5" ToolTip="Activating transposition table speed up search by caching previous search results." />
+                    <Label Content="Size (MB)" Height="28" Name="label5" Margin="10,7,0,5" ToolTip="Size in MB. The value can be between 4 and 992" />
+                    <TextBox Height="22" Name="textBoxTransSize" Width="44" Margin="5,7,5,5" ToolTip="Size in MB. The value can be between 4 and 992" TextChanged="TextBoxTransSize_TextChanged" HorizontalContentAlignment="Center" />
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </DockPanel>
+</Window>

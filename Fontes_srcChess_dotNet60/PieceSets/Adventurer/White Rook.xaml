@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Viewbox Stretch="Uniform">
+    <Grid Width="10.996099948883" Height="17.324220180511">
+      <Path Fill="Black" Stretch="Fill" Data="M6.836,8.8817842E-16 L6.9141,1.16211 8.33011,1.16211 8.40821,8.8817842E-16 10.67383,8.8817842E-16 10.67383,3.33007 9.83399,4.66797 9.83399,11.99218 10.67383,13.33007 10.67383,15.33203 10.9961,15.33203 10.9961,17.32422 3.9443045E-31,17.32422 3.9443045E-31,15.33203 0.32227,15.33203 0.32227,13.33007 1.16211,11.99218 1.16211,4.66797 0.32227,3.33007 0.32227,-3.9443045E-30 2.57813,-3.9443045E-30 2.66603,1.16211 4.08205,1.16211 4.16015,-3.9443045E-30&#xD;&#xA; z" />
+      <Path Fill="White" Stretch="Fill" Data="M-3.1554436E-30,1.5146129E-28 L-3.1554436E-30,7.32421 7.32422,7.32421 7.32422,1.5146129E-28 z" Margin="1.836,4.668,1.836,5.332" />
+      <Path Fill="White" Stretch="Fill" Data="M3.2348628E-08,-7.1054276E-15 L3.2348628E-08,1.33789 8.98438,1.33789 8.98438,-7.1054276E-15 z" Height="1.338" Margin="1.006,0,1.006,1.992" VerticalAlignment="Bottom" />
+      <Path Fill="White" Stretch="Fill" Data="M0.41016,2.7755702E-07 L-1.110223E-15,0.66406028 8.78906,0.66406028 8.37891,2.7755702E-07 z" Height="0.664" Margin="1.104,0,1.103,3.994" VerticalAlignment="Bottom" />
+      <Path Fill="White" Stretch="Fill" Data="M2.2204456E-16,2.452083E-07 L2.2204456E-16,0.66406025 9.66797,0.66406025 9.66797,2.452083E-07 z" Height="0.664" Margin="0.674,0,0.654,0.664" VerticalAlignment="Bottom" />
+      <Path Fill="White" Stretch="Fill" Data="M-1.3322677E-15,-2.2204461E-15 L0.41016,0.6543 8.37891,0.6543 8.78906,-2.2204461E-15 z" Height="0.654" Margin="1.104,3.33,1.103,0" VerticalAlignment="Top" />
+      <Path Fill="White" Stretch="Fill" Data="M4.0021782E-05,2.00195 L8.98442,2.00195 8.98442,5.0926019E-09 8.07622,5.0926019E-09 7.98832,1.16211 5.24417,1.16211 5.15627,5.0926019E-09 3.82815,5.0926019E-09 3.74025,1.16211 0.99611002,1.16211 0.90821002,5.0926019E-09 2.1781915E-08,5.0926019E-09 z" Height="2.002" Margin="1.006,0.664,1.006,0" VerticalAlignment="Top" />
+    </Grid>
+  </Viewbox>
+</UserControl>
