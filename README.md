@@ -22,3 +22,6 @@ Hints for the player
 Etc.
 
 Autor: Jacques Fournier (https://www.codeproject.com/script/Membership/View.aspx?mid=399077)
+
+
+Original post: https://www.codeproject.com/Articles/36112/Chess-Program-in-C?msg=5904682#xx5904682xx
